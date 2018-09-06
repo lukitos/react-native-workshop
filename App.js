@@ -1,42 +1,56 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component, Fragment } from 'react';
+import { Platform, StyleSheet, FlatList, Text, View, Image } from 'react-native';
 
 import users from './data.json';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const thumbImage = 'https://cdn0.iconfinder.com/data/icons/typicons-2/24/contacts-512.png';
 
-export default class App extends Component {
+class App extends Component {
+
+  contactItem = item => {
+    console.log('item ', item);
+    return(
+      <View style={styles.itemStyle}>
+        <Text>{item.name}</Text>
+      </View>
+    );
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to Thinkful Family Dinner and React Native Code Workshop!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Fragment>
+        <View style={styles.thumbnailContainer}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{uri: thumbImage}}
+          />
+        </View>
+        <FlatList
+          data={users}
+          renderItem={(data) => this.contactItem(data.item)}
+          keyExtractor={(data) => data.id.toString()}
+        />
+      </Fragment>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  thumbnailContainer: {
+    padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#ff8c00'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  thumbnailStyle: {
+    height: 100,
+    width: 100
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  itemStyle: {
+    padding: 15,
+    borderColor: 'lightgray',
+    borderBottomWidth: 0.5
+  }
 });
+
+export default App;
