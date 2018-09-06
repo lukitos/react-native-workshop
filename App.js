@@ -5,32 +5,36 @@ import users from './data.json';
 
 const thumbImage = 'https://cdn0.iconfinder.com/data/icons/typicons-2/24/contacts-512.png';
 
-class App extends Component {
+contactItem = item => {
+  return (
+    <View style={styles.itemStyle}>
+      <Text>{item.name}</Text>
+    </View>
+  );
+}
 
-  contactItem = item => {
-    console.log('item ', item);
-    return(
-      <View style={styles.itemStyle}>
-        <Text>{item.name}</Text>
+const Home = () => {
+  return(
+    <Fragment>
+      <View style={styles.thumbnailContainer}>
+        <Image
+          style={styles.thumbnailStyle}
+          source={{uri: thumbImage}}
+        />
       </View>
-    );
-  }
+      <FlatList
+        data={users}
+        renderItem={(data) => contactItem(data.item)}
+        keyExtractor={(data) => data.id.toString()}
+      />
+    </Fragment>
+  );
+}
 
+class App extends Component {
   render() {
     return (
-      <Fragment>
-        <View style={styles.thumbnailContainer}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{uri: thumbImage}}
-          />
-        </View>
-        <FlatList
-          data={users}
-          renderItem={(data) => this.contactItem(data.item)}
-          keyExtractor={(data) => data.id.toString()}
-        />
-      </Fragment>
+      <Home />
     );
   }
 }
