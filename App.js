@@ -3,6 +3,8 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import users from './data.json';
 
+const thumbImage = 'https://cdn0.iconfinder.com/data/icons/typicons-2/24/contacts-512.png';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
