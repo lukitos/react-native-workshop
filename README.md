@@ -1,3 +1,5 @@
+![alt text](https://user-images.githubusercontent.com/26825364/45324894-54159f80-b504-11e8-84b6-8d168d6d1cc7.png)
+
 # react-native-workshop
 A contact list and detail mobile app built with React Native. There are multiple branches to this project so that you clone the branch of your choice as a starting point. You can see the finished code for each stage by switching to the appropriate branch.
 
