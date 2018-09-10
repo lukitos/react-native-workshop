@@ -6,7 +6,7 @@ A contact list and detail mobile app built with React Native. There are multiple
 Please review the React Native getting started documentation to setup your environment: 
 https://facebook.github.io/react-native/docs/getting-started.html
 
-1. Have Homebrew (http://brew.sh/) installed, and then run the following 2 commands to install Node and Watchman if you don’t already have them. If you have Node installed, make sure it’s Node version 8.3 or newer. You can use “node -v” command to check.
+1. Have Homebrew (http://brew.sh/) installed, and then run the following 2 commands to install Node and Watchman if you don’t already have them. If you have Node installed, make sure it’s Node version 8.3 or newer. You can use `node -v` command to check.
 
 ```
 brew install node
@@ -36,3 +36,7 @@ brew install watchman
 4. Run the application.
 
 `react-native run-ios`
+
+5. Use your favorite text editor to modify the code. I recommend Visual Studio Code (https://code.visualstudio.com/).
+
+`code .`
