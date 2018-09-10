@@ -1,5 +1,5 @@
 # react-native-workshop
-A contact list and detail mobile app built with React Native. There are multiple branches to this project so that you clone the branch of your choice as a starting plan.
+A contact list and detail mobile app built with React Native. There are multiple branches to this project so that you clone the branch of your choice as a starting point. You can see the finished code for each stage by switching to the appropriate branch.
 
 ## Pre-requisites
 
@@ -35,4 +35,4 @@ brew install watchman
 
 4. Run the application.
 
-  `react-native run-ios`
+`react-native run-ios`
