@@ -13,8 +13,13 @@ brew install watchman
 
 2. In order to run the iOS version, be sure to have Xcode installed. You can go to Mac App Store (https://itunes.apple.com/us/app/xcode/id497799835?mt=12) to install. If you already have Xcode installed, please make sure it’s version 9.4 or newer.
 
+3. Run the following command in a Terminal:
+
+`npm install -g react-native-cli`
+
 In order to get started use the following command to clone a starting point of the project: 
 
 `git clone -b starter-project https://github.com/lukitos/react-native-workshop.git`
+
 
 
