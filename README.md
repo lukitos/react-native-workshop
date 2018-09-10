@@ -35,4 +35,4 @@ brew install watchman
 
 4. Run the application.
 
-`react-native run-ios`
+...`react-native run-ios`
