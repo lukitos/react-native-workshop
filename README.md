@@ -1,6 +1,8 @@
 # react-native-workshop
 A contact list and detail mobile app built with React Native. There are multiple branches to this project so that you clone the branch of your choice as a starting plan.
 
+## Pre-requisites
+
 Please review the React Native getting started documentation to setup your environment: 
 https://facebook.github.io/react-native/docs/getting-started.html
 
@@ -17,9 +19,20 @@ brew install watchman
 
 `npm install -g react-native-cli`
 
-In order to get started use the following command to clone a starting point of the project: 
+## Getting started
+
+1. Use the following command to clone a starting point of the project.
 
 `git clone -b starter-project https://github.com/lukitos/react-native-workshop.git`
 
+2. Navigate to the react-native-workshop directory.
 
+`cd react-native-workshop`
 
+3. Install dependencies.
+
+`npm install`
+
+4. Run the application.
+
+`react-native run-ios`
